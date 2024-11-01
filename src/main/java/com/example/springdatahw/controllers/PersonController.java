@@ -36,7 +36,7 @@ public class PersonController {
         getAllPeople();
     }
 
-    @PostMapping("/update/{id}/{name}/{age}")
+    @PutMapping("/update/{id}/{name}/{age}")
     public void updatePerson(@PathVariable Long id, @PathVariable String name, @PathVariable int age) {
         personService.updateById(id, name, age);
         getAllPeople();
